@@ -12,16 +12,16 @@ class Television:
     self.__channel = Television.MIN_CHANNEL
     self.__volume = Television.MIN_VOLUME
 
-  def power(self):
+  def power(self) -> None:
     # Method to turn on/off the TV
     self.__status = not self.__status
 
-  def mute(self):
+  def mute(self) -> None:
     # Method to mute the TV
     if self.__status:
       self.__mute = not self.__mute
 
-  def channel_up(self):
+  def channel_up(self) -> None:
     # Method to increase channel
     if self.__status:
       if self.__channel == self.MAX_CHANNEL:
@@ -29,7 +29,7 @@ class Television:
       else:
         self.__channel += 1
 
-  def channel_down(self):
+  def channel_down(self) -> None:
     # Method to decrease channel
     if self.__status:
       if self.__channel == self.MIN_CHANNEL:
@@ -37,7 +37,7 @@ class Television:
       else:
         self.__channel -= 1
 
-  def volume_up(self):
+  def volume_up(self) -> None:
     # Method to increase TV volume
     if self.__status:
       if self.__mute:
@@ -45,7 +45,7 @@ class Television:
       if self.__volume != self.MAX_VOLUME:
         self.__volume += 1
 
-  def volume_down(self):
+  def volume_down(self) -> None:
     # Method to reduce TV volume
     if self.__status:
       if self.__mute:
